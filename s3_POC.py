@@ -11,7 +11,7 @@ def s3_upload(file_name, bucket_name=os.getenv('S3_BUCKET_NAME')):
     )
     try:
         print(file_name)
-        s3.upload_file(file_name, bucket_name, f"DuplicateFiles/{file_name}")
+        s3.upload_file(file_name, bucket_name, f"folder_name/{file_name}")
         
     except Exception as e:
         print('error is ',e)
